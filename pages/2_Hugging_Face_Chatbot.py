@@ -8,7 +8,7 @@ from time import sleep
 
 #AVATARS
 av_us = 'images/woman.png'  
-av_bot = 'https://raw.githubusercontent.com/pnshann/genai_transformers/main/images/robot.png?token=GHSAT0AAAAAACF4D57IMBH44DKWC5R6TXTQZGNOQ3Q'
+av_bot = 'images/robot.png'
 
 # FUNCTION TO LOG ALL CHAT MESSAGES INTO chathistory.txt
 def writehistory(text):
@@ -57,10 +57,10 @@ if "messages" not in st.session_state:
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     if message["role"] == "user":
-        with st.chat_message(message["role"],avatar=av_us):
+        with st.chat_message(message["role"]):
             st.markdown(message["content"])
     else:
-        with st.chat_message(message["role"],avatar=av_bot):
+        with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
 # Accept user input
@@ -73,7 +73,7 @@ if myprompt := st.chat_input():
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": myprompt})
     # Display user message in chat message container
-    with st.chat_message("user", avatar=av_us):
+    with st.chat_message("user"):
         st.markdown(myprompt)
         usertext = f"user: {myprompt}"
         writehistory(usertext)
