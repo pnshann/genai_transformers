@@ -15,8 +15,8 @@ This project requires the following pacakges:
 
 To use the app, you will need an API key from Hugging Face and/or OpenAI. You can create an API key for either using the links below:
 
-- OpenAI[https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key]
-- Hugging Face[https://huggingface.co/docs/hub/security-tokens]
+- OpenAI - https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key
+- Hugging Face - https://huggingface.co/docs/hub/security-tokens
 
 # Credits 
 
