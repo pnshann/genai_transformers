@@ -1,5 +1,5 @@
-pip install transformers
 python3.10 -m pip install --upgrade pip
+pip install transformers
 pip install langchain
 pip install huggingface_hub
 pip install streamlit==1.24.0
