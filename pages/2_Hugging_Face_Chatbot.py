@@ -8,7 +8,7 @@ from time import sleep
 
 #AVATARS
 av_us = 'images/woman.png'  
-av_bot = 'images/robot.png'
+av_bot = 'https://raw.githubusercontent.com/pnshann/genai_transformers/main/images/robot.png?token=GHSAT0AAAAAACF4D57IMBH44DKWC5R6TXTQZGNOQ3Q'
 
 # FUNCTION TO LOG ALL CHAT MESSAGES INTO chathistory.txt
 def writehistory(text):
