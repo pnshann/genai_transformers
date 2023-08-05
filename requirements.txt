@@ -1,4 +1,4 @@
-python3.10 -m pip install --upgrade pip
+/home/adminuser/venv/bin/python -m pip install --upgrade pip
 pip install transformers
 pip install langchain
 pip install huggingface_hub
