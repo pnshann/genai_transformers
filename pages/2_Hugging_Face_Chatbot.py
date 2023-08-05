@@ -7,8 +7,8 @@ import os
 from time import sleep
 
 #AVATARS
-av_us = './images/woman.png'  
-av_bot = './images/robot.png'
+av_us = 'images/woman.png'  
+av_bot = 'images/robot.png'
 
 # FUNCTION TO LOG ALL CHAT MESSAGES INTO chathistory.txt
 def writehistory(text):
@@ -21,7 +21,7 @@ def writehistory(text):
 repo="HuggingFaceH4/starchat-beta"
 
 ### START STREAMLIT UI
-st.title("Chatbot Powered by Hugging Face 🤗")
+st.title("Chatbot Powered by Hugging Face")
 st.subheader("Starchat-beta Model")
 
 with st.sidebar:
