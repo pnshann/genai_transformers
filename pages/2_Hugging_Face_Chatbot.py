@@ -27,7 +27,7 @@ st.subheader("Starchat-beta Model")
 with st.sidebar:
     yourHFtoken = st.text_input("HuggingFace API Key", key="yourHFtoken", type="password")
     "[Get an API Key from Hugging Face](https://huggingface.co/docs/hub/security-tokens)"
-    "[View the source code](https://github.com/pnshann/genai_transformers/pages/2_Hugging_Face_Chatbot.py)"
+    "[View the source code](https://github.com/pnshann/genai_transformers/blob/main/pages/2_Hugging_Face_Chatbot.py)"
 
 # Set a default model
 if "hf_model" not in st.session_state:
