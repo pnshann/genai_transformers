@@ -14,5 +14,7 @@ st.markdown(
     This website was built for learning how to connect to various LLMs to create chatbots.
 
     **Select an interface from the sidebar 👈** to chat with a chatbot using either HuggingFace or OpenAI!
+    
+    OR... chat with your PDF using the 'Chat with Your PDF' section.
     """
 )
