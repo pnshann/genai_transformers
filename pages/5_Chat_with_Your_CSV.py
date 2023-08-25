@@ -58,6 +58,13 @@ def display_content_from_json(json_response):
         df = pd.DataFrame(data["data"], columns=data["columns"])
         st.table(df)
 
+    # Check if the response has a table.
+    if "correlation" in json_response:
+        data = json_response["correlation"]
+        df = pd.DataFrame(data)
+        df.set_index("columns", inplace=True)
+        st.write(df)
+
 
 def extract_code_from_response(response):
     """Extracts Python code from a string response."""
@@ -84,7 +91,7 @@ def csv_analyzer_app():
       st.stop()
 
     if uploaded_file is not None:
-        file_path = os.path.join("../",uploaded_file.name) #os.path.join("../../templates", uploaded_file.name)
+        file_path = os.path.join("../",uploaded_file.name)
         with open(file_path, "wb") as f:
             f.write(uploaded_file.getbuffer())
         
