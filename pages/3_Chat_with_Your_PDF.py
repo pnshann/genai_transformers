@@ -9,7 +9,6 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 
-
 def main():
     load_dotenv()
     st.header("Chat with your PDF 💬")
@@ -33,16 +32,17 @@ def main():
         text += page.extract_text()
         
       # split into chunks
-      text_splitter = CharacterTextSplitter(
-        separator="\n",
-        chunk_size=1000,
-        chunk_overlap=200,
-        length_function=len
-      )
+      text_splitter = CharacterTextSplitter.from_tiktoken_encoder(chunk_size=100, chunk_overlap=0)
+      #CharacterTextSplitter(
+      #  separator="\n",
+      #  chunk_size=1000,
+      #  chunk_overlap=200,
+      #  length_function=len
+      #)
       chunks = text_splitter.split_text(text)
       
       # create embeddings
-      embeddings = OpenAIEmbeddings(openai_api_key = yourOpenAItoken)
+      embeddings = OpenAIEmbeddings(openai_api_key = yourOpenAItoken, model = 'text-embedding-ada-002')
       knowledge_base = FAISS.from_texts(chunks, embeddings)
       
       # show user input
