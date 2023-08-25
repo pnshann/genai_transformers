@@ -12,3 +12,6 @@ python-dotenv==1.0.0
 tiktoken
 pandas
 matplotlib
+seaborn
+scikit-learn
+numpy
