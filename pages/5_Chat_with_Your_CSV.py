@@ -15,9 +15,8 @@ def csv_agent_func(file_path, user_message, OPENAI_API_KEY):
     agent = create_csv_agent(
         ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613", openai_api_key=OPENAI_API_KEY),
         file_path, 
-        verbose=True
-        #,
-        #agent_type=AgentType.OPENAI_FUNCTIONS,
+        verbose=True,
+        agent_type=AgentType.OPENAI_FUNCTIONS,
     )
 
     try:
