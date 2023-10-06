@@ -52,55 +52,6 @@ The pipe operator is a way to chain functions together. It is a way to connect f
 user: Hi! What is the square root of 100?
 assistant: 
 The square root of 100 is 10. 
-user: Who are you?
-assistant: 
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<|user|>
-<|assistant|>
-<| 
 user: Hi. Pretend you are data scientist. explain what the pipe operator is in R and provide a code snippit that uses the pipe operator.
 assistant: 
 The pipe operator, or the "pipe" for short, is a special character in R that is used to chain together the output of one function as the input of another. It is often used for data processing pipelines, where data is passed through a series of functions to transform it into the desired output.
@@ -119,3 +70,5 @@ df %>%
 In the first code snippet, we use the mean function three times to calculate the mean of each column separately. This is inefficient, as we are repeating the same calculation three times. With the pipe operator, we can chain the output of each function together, resulting in a more efficient and readable code.
 
 In the second code snippet, we use the pipe operator to pass the data frame "df" into the summarise_each function, which calculates the 
+user: Hi!
+user: Hi
