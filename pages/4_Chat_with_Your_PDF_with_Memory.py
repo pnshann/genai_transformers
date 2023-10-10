@@ -153,7 +153,7 @@ if uploaded_file:
                 ),
                 prompt=prompt,
             )
-            agent = ZeroShotAgent(llm_chain=llm_chain, tools=tools, verbose=True)
+            agent = ZeroShotAgent(llm_chain=llm_chain, tools=tools, verbose=True, handle_parsing_errors=True)
             agent_chain = AgentExecutor.from_agent_and_tools(
                 agent=agent, tools=tools, verbose=True, memory=st.session_state.memory
             )
