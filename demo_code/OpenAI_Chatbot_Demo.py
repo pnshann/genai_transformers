@@ -17,6 +17,8 @@ def init():
         page_title="Chatbot Powered by OpenAI"
     )
 
+    st.header("Your personal chatbot! Powered by OpenAI")
+    
     with st.sidebar:
       youropenaikey = st.text_input("OpenAI API Key", key="youropenaitoken", type="password")    
 
@@ -35,10 +37,9 @@ def main():
     # initialize message history
     if "messages" not in st.session_state:
         st.session_state.messages = [
+            # this is our prompt template that we are using 
             SystemMessage(content="You are a helpful assistant.")
         ]
-
-    st.header("Your personal chatbot! Powered by OpenAI")
 
     user_input = st.text_input("Your message: ", key="user_input")
 
@@ -48,6 +49,7 @@ def main():
         with st.spinner("Thinking..."):
             response = chat(st.session_state.messages)
         st.session_state.messages.append(
+	    # AIMessage is acting as our output parser 
             AIMessage(content=response.content))
 
     # display message history
