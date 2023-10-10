@@ -17,6 +17,7 @@ def csv_agent_func(file_path, user_message, OPENAI_API_KEY):
         file_path, 
         verbose=True,
         agent_type=AgentType.OPENAI_FUNCTIONS,
+        handle_parsing_errors=True
     )
 
     try:
