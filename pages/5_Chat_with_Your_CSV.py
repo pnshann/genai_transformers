@@ -38,7 +38,7 @@ def main():
             temporary_file.write(csv_file.getvalue())
 
         # initialize agent
-        agent = create_csv_agent(OpenAI(temperature=0), path=temporary_file.name, verbose=True)
+        agent = create_csv_agent(OpenAI(temperature=0, model_name = 'gpt-3.5-turbo-16k'), path=temporary_file.name, verbose=True)
 
         # delete temp file
         os.unlink(temporary_file.name)

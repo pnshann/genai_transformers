@@ -13,7 +13,7 @@ from langchain.agents.agent_types import AgentType
 def csv_agent_func(file_path, user_message, OPENAI_API_KEY):
     """Run the CSV agent with the given file path and user message."""
     agent = create_csv_agent(
-        ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613", openai_api_key=OPENAI_API_KEY),
+        ChatOpenAI(temperature=0, model="gpt-3.5-turbo-16k", openai_api_key=OPENAI_API_KEY),
         file_path, 
         verbose=True,
         agent_type=AgentType.OPENAI_FUNCTIONS,
@@ -73,7 +73,7 @@ def extract_code_from_response(response):
 
 
 def csv_analyzer_app():
-    st.title('Chat with your data :file_folder:')
+    st.title('Visualize your data :file_folder:')
     st.write('Upload your CSV and enter your question below:')
          
     with st.sidebar:
